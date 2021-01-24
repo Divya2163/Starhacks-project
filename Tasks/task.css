@@ -171,6 +171,24 @@ h1 {
     margin-left: 12px;
   }
   
+.finished {
+	position: absolute;
+	margin-top: 800px;
+	margin-left: 78%;
+	z-index: 5;
+	width: 167px;
+	height: 54px;
+	background-color: #FAAFA5;
+	font-family: Gaegu;
+	font-style: normal;
+	font-weight: bold;
+	font-size:  36px;
+	text-align: center;
+	color: white;
+	border: 0px;
+	border-radius: 10px;
+}  
+  
   #rcorners1 {
  border-radius: 5px;
  background: #FAAFA5;
