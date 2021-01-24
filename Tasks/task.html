@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" href="task.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="header">
+			<img class="dragon" src="dragon2.png" width="134" height="100" alt="Mood Booster" />
+
+			<span class="app-name"> Mood booster</span>
+			<span><input class="log-out" type="button" value="Log out" onclick=" "></span>
+		</div>
+
+		<div class="task-list">
+			<img src="smoke.png" id="breath" class="smoke" alt="breath" />
+			<img src="air.png" id="air" class="air" alt="air" />
+			<img src="meditation.png" id="meditation" class="meditation" alt="air" />
+			
+			<img id="dragon" width="471" height="479" src="bluedragon.png" class="bluedragon" alt="blue dragon">
+			<img src="bubble_breath.png" id="bubble_breath" class="bubble" alt="breath" />
+			<img src="bubble_air.png" id="bubble_air" class="bubble" alt="air" />
+			<img src="bubble_meditation.png" id="bubble_meditation" class="bubble" alt="" />
+			<div class="right">
+				<h1>Task List</h1>
+				<ul id="check_list" class="check-list">
+					<button onclick="deep_breaths()">
+						<input id="breath_check" type="checkbox" />
+						<span> Take 5 deep breaths <span>
+					</button>
+				
+					<button onclick="fresh_air()">
+						<input id="air_check" type="checkbox" />
+						<span>Get some fresh air<span>
+					</button>
+					<button onclick="meditation()">
+						<input id="check_meditation" type="checkbox" />
+						<span>Let's meditate together<span>
+					</button>
+					<button>
+						<input type="checkbox" />
+						<span>Check this<span>
+					</button>
+					<button>
+						<input type="checkbox" />
+						<span>Check this<span>
+					</button>
+				</ul>
+			</div>
+		</div>
+
+
+		<audio id="player" class="music" src="Amelie.mp3" controls/>
+
+		<script>
+			var mood = "angry";
+			var audios = ["Amelie.mp3", "Amelie.mp3"]
+			var x = 0;
+			var music = document.getElementById("player");
+			$("#player")
+				.bind("ended", function () {
+					if (x === (audios.length - 1)) {
+						x = 0;
+					} else {
+						x = x + 1;
+					}
+					music.src = audios[x];
+					music.load();
+					music.play();
+				});
+
+
+			const delay = ms => new Promise(res => setTimeout(res, ms));
+			async function deep_breaths() {
+				
+				var breath = document.getElementById("breath");
+				var bubble = document.getElementById("bubble_breath");
+				bubble.style.display = "inline";
+
+				await delay(1500);
+				for (let i = 0; i < 5; i++) {
+					breath.style.display = "inline";
+					await delay(1500);
+					breath.style.display = "none";
+					await delay(1500);
+				}
+				bubble.style.display = "none";
+				var checkbox = document.getElementById("breath_check");
+				checkbox.checked = true;
+			}
+			
+			async function fresh_air() {
+				var task = document.getElementById("air");
+				var bubble = document.getElementById("bubble_air");
+				bubble.style.display = "inline";
+				await delay(1500);
+				task.style.display = "inline";
+				await delay(3000);
+				bubble.style.display = "none";
+				task.style.display = "none";
+				var checkbox = document.getElementById("air_check");
+				checkbox.checked = true;
+			}
+			
+			async function meditation() {
+				var task = document.getElementById("meditation");
+				var bubble = document.getElementById("bubble_meditation");
+				var music = document.getElementById("player");
+				
+				music.src = audios[0];
+				music.load();
+				music.play();
+				bubble.style.display = "inline";
+				
+				await delay(1500);
+				bubble.style.display = "none";
+				task.style.display = "inline";
+				music.style.display = "inline";
+				await delay(60000);
+				task.style.display = "none";
+				var checkbox = document.getElementById("check_meditation");
+				checkbox.checked = true;
+			}
+		</script>
+	</body>
+ggg
+</html>

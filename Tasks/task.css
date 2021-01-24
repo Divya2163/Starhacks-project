@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu&display=swap');
+* { 
+	margin: 0;
+	padding: 0;
+}
+body {
+    background-color: #9FE481;
+	height: 1024px;
+	box-sizing: border-box;
+}
+.header {
+	z-index: 5;
+	overflow: hidden;
+	width: 100vw;
+	left: 0px;
+	top: 0px;
+	background-color: white;
+}
+.header .dragon {
+	z-index: 5;
+	vertical-align:middle;
+	width: 134.81px;
+	height: 100px;
+	left: 4px;
+	top: 30px;
+	margin-bottom: -10px;
+}
+.header .app-name {
+	z-index: 5;
+	vertical-align:middle; 
+	display:inline
+	top: 0px;
+	bottom: 30px;
+	width: 398px;
+	left: 123px;
+	font-family: Gaegu;
+	font-style: normal;
+	font-weight: bold;
+	font-size:  64px;
+	text-align: center;
+	color: #FAAFA5;
+}
+
+.header .log-out {
+	z-index: 5;
+	width: 167px;
+	height: 54px;
+	background-color: #FAAFA5;
+	font-family: Gaegu;
+	font-style: normal;
+	font-weight: bold;
+	font-size:  36px;
+	text-align: center;
+	color: white;
+	border: 0px;
+	border-radius: 10px;
+	position:absolute;
+	left: 85%;
+	top: 20px;
+}
+
+.bluedragon {
+	position:absolute;
+	margin-top: 15vh;
+	margin-left: 40vh;
+	z-index: 5;
+ }
+ 
+ .smoke {
+ 	z-index:3;
+ 	display: flex;
+ 	margin-top: 330px;
+ 	display: none;
+ }
+ 
+.air {
+ z-index:-1;
+ margin-top: -120px;
+ margin-left: 140px;
+ display: none;
+}
+
+.meditation {
+ z-index:-1;
+ margin-top: -120px;
+ margin-left: -150px;
+ display: none;
+}
+
+.music {
+ display: none;
+}
+ 
+ .bubble {
+ 	z-index:3;
+ 	position:absolute;
+ 	width: 371px;
+	height: 268px;
+	left: 650px;
+	top: 100px;
+	display: none;
+ }
+ 
+.task-list {
+	
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+	margin-top: 50px;
+	font-family: Gaegu;
+	font-style: normal;
+	font-weight: bold;
+	font-size:  64px;
+    color: #fff;
+    text-align: center;
+    padding: 0 10px;
+}
+.right{
+	position:absolute;
+	display:flex;
+	flex-direction:column;
+	background-color: #FAAFA5;
+	min-width: 500px;
+	max-width:700px;
+	height:auto;
+	margin-left: 65%;
+	border-radius: 45px;
+	margin-top: 20px;
+  
+}
+
+  .check-list {
+    border: 25px solid #FAAFA5;
+    margin: 30px auto;
+    max-width: 420px;
+    background-color: #FAAFA5;
+    
+    border-radius: 4px;
+    box-shadow: 0px 0px 0 #FAAFA5;
+    list-style: none;
+    padding: 0;
+	width: 90%;
+  }
+
+  .check-list button {
+  	width: 100%;
+  	cursor: pointer;
+  	background-color: #fff;
+    padding: 20px 10px 20px 25px;
+    border-bottom: 4px solid #FAAFA5;
+    border: 5px solid #DC95DD;
+    border-radius:10px;
+    margin-bottom: 10px;
+   
+  }
+
+  
+  .check-list button input[type=checkbox]:checked + span {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  .check-list button span {
+  	color: #DC95DD;	font-family: Gaegu;
+	font-style: normal;
+	font-weight: bold;
+	font-size:  32px;
+    display: inline-block;
+    margin-left: 12px;
+  }
+  
+  #rcorners1 {
+ border-radius: 5px;
+ background: #FAAFA5;
+ padding: 20px; 
+ width: 200px;
+ height: 150px;  
+}
